@@ -226,6 +226,11 @@ class CalendarController {
     _updateVisibleDays(true);
   }
 
+  // Update calendar events
+  void setEvents(Map<DateTime, List> events){
+    _events = events;
+  }
+
   void _updateVisibleDays(bool isProgrammatic) {
     if (calendarFormat != CalendarFormat.twoWeeks || isProgrammatic) {
       _visibleDays.value = _getVisibleDays();
